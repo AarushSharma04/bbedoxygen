@@ -15,7 +15,7 @@ var searchData=
   ['sdl_5fdestroyrenderer_12',['SDL_DestroyRenderer',['../namespacemain.html#a42997c7c54084815bfed352d8cee6c83',1,'main']]],
   ['sdl_5fdestroywindow_13',['SDL_DestroyWindow',['../namespacemain.html#a541352f38c03843d2f9ac5435ea55f06',1,'main']]],
   ['sdl_5fquit_14',['SDL_Quit',['../namespacemain.html#a2bb998d5f690bfac6b292e8d52555699',1,'main']]],
-  ['speedcap_15',['speedCap',['../namespaceball.html#a1613bf77f3b60fa6f5845f6772360774',1,'ball']]],
+  ['speedcap_15',['speedCap',['../classball_1_1_ball.html#a971ab053467d344bf14e3c8cf6403566',1,'ball::Ball']]],
   ['starttime_16',['startTime',['../classgame__scene_1_1_game_scene.html#ae93531f9e0482f13c239f77bdab82a3f',1,'game_scene::GameScene']]],
   ['statusmessage_17',['statusMessage',['../namespaceupload__scene.html#aeacb65e691428dd08dd6bab2e384a6d8',1,'upload_scene']]],
   ['strength_18',['strength',['../classbricks_1_1_brick.html#a28830c17a3779ac34106615a1216a9c9',1,'bricks::Brick']]]

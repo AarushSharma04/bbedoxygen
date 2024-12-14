@@ -27,7 +27,7 @@
   <td id="projectalign">
    <div id="projectname">Brick Breaker
    </div>
-   <div id="projectbrief">Brick Breaker inspired game,  customizable levels</div>
+   <div id="projectbrief">Brick Breaker  game,  customizable levels</div>
   </td>
  </tr>
  </tbody>
@@ -113,67 +113,95 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> <a class="code hl_namespace" href="namespacegame__won__scene.html">game_won_scene</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_namespace" href="namespacemain.html">main</a>() {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    SDL_Window* window;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    SDL_Renderer* renderer;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO) != 0) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        writeln(<span class="stringliteral">&quot;Error initializing SDL: &quot;</span>, SDL_GetError());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    loadSDLTTF();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    TTF_Init();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    window = SDL_CreateWindow(<span class="stringliteral">&quot;Brick Breaker&quot;</span>, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    SceneManager sceneManager = <span class="keyword">new</span> SceneManager();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_namespace" href="namespacemain.html">main</a>() </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    SDL_Window* window;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    SDL_Renderer* renderer;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO) != 0) </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        writeln(<span class="stringliteral">&quot;Error initializing SDL: &quot;</span>, SDL_GetError());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    loadSDLTTF();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    TTF_Init();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    window = SDL_CreateWindow(<span class="stringliteral">&quot;Brick Breaker&quot;</span>, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    HomeScene homeScene = <span class="keyword">new</span> HomeScene(renderer, &amp;sceneManager);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    sceneManager.addScene(<span class="stringliteral">&quot;home&quot;</span>, homeScene);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacemain.html#a11df662e8283283e1bd8477094b2ec63">   40</a></span>    sceneManager.changeScene(<span class="stringliteral">&quot;home&quot;</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">   42</a></span>    EditScene <a class="code hl_variable" href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">editScene</a> = <span class="keyword">new</span> EditScene(renderer, &amp;sceneManager, <span class="stringliteral">&quot;Editing bricks.json...&quot;</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacemain.html#adb7795a5dc442505328b15442f204a91">   43</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;edit&quot;</span>, editScene);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">   45</a></span>    UploadScene <a class="code hl_variable" href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">uploadScene</a> = <span class="keyword">new</span> UploadScene(renderer, &amp;sceneManager);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacemain.html#a4aaf9c1cc953abded64469ff7a661576">   46</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;upload&quot;</span>, uploadScene);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">   48</a></span>    GameScene <a class="code hl_variable" href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">gameScene</a> = <span class="keyword">new</span> GameScene(renderer, &amp;sceneManager);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacemain.html#ab3079c79fda3b94b23b888edeb0df4c7">   49</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;game&quot;</span>, gameScene);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">   51</a></span>    GameOverScene <a class="code hl_variable" href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">gameOverScene</a> = <span class="keyword">new</span> GameOverScene(renderer, &amp;sceneManager);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespacemain.html#aff8a095ad5c6669ff725f25c2ebeeceb">   52</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;gameOver&quot;</span>, gameOverScene);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">   54</a></span>    GameWonScene <a class="code hl_variable" href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">gameWonScene</a> = <span class="keyword">new</span> GameWonScene(renderer, &amp;sceneManager);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacemain.html#a8da70d26e227c0bdc0f294cb5d2c1283">   55</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;gameWon&quot;</span>, gameWonScene);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">   57</a></span>    SDL_Event <a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">   58</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">running</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacemain.html#a50ff163f062d2d699dba58bfd6e9e8dd">   60</a></span>    <span class="keywordflow">while</span> (running) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">while</span> (SDL_PollEvent(&amp;<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>) != 0) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>.type == SDL_QUIT) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <a class="code hl_variable" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">running</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                sceneManager.handleEvent(<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    SceneManager sceneManager = <span class="keyword">new</span> SceneManager();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    HomeScene homeScene = <span class="keyword">new</span> HomeScene(renderer, &amp;sceneManager);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    sceneManager.addScene(<span class="stringliteral">&quot;home&quot;</span>, homeScene);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacemain.html#a11df662e8283283e1bd8477094b2ec63">   42</a></span>    sceneManager.changeScene(<span class="stringliteral">&quot;home&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">   44</a></span>    EditScene <a class="code hl_variable" href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">editScene</a> = <span class="keyword">new</span> EditScene(renderer, &amp;sceneManager, <span class="stringliteral">&quot;Editing bricks.json...&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacemain.html#adb7795a5dc442505328b15442f204a91">   45</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;edit&quot;</span>, editScene);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">   47</a></span>    UploadScene <a class="code hl_variable" href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">uploadScene</a> = <span class="keyword">new</span> UploadScene(renderer, &amp;sceneManager);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacemain.html#a4aaf9c1cc953abded64469ff7a661576">   48</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;upload&quot;</span>, uploadScene);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">   50</a></span>    GameScene <a class="code hl_variable" href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">gameScene</a> = <span class="keyword">new</span> GameScene(renderer, &amp;sceneManager);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacemain.html#ab3079c79fda3b94b23b888edeb0df4c7">   51</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;game&quot;</span>, gameScene);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">   53</a></span>    GameOverScene <a class="code hl_variable" href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">gameOverScene</a> = <span class="keyword">new</span> GameOverScene(renderer, &amp;sceneManager);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacemain.html#aff8a095ad5c6669ff725f25c2ebeeceb">   54</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;gameOver&quot;</span>, gameOverScene);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">   56</a></span>    GameWonScene <a class="code hl_variable" href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">gameWonScene</a> = <span class="keyword">new</span> GameWonScene(renderer, &amp;sceneManager);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="namespacemain.html#a8da70d26e227c0bdc0f294cb5d2c1283">   57</a></span>    sceneManager.addScene(<span class="stringliteral">&quot;gameWon&quot;</span>, gameWonScene);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">   59</a></span>    SDL_Event <a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">   60</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">running</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//time management</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespacemain.html#aa91f4d7db95935b071c29486230367b7">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemain.html#aa91f4d7db95935b071c29486230367b7">targetFPS</a> = 60;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="namespacemain.html#a0f4f6b088879a2f55d2b71b0fbcb465a">   64</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemain.html#a0f4f6b088879a2f55d2b71b0fbcb465a">frameDelay</a> = 1000 / <a class="code hl_variable" href="namespacemain.html#aa91f4d7db95935b071c29486230367b7">targetFPS</a>; <span class="comment">// 16 ms per frame</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacemain.html#a3fc63bc7d06dc72f3e1a37a8b359d942">   65</a></span>    uint <a class="code hl_variable" href="namespacemain.html#a3fc63bc7d06dc72f3e1a37a8b359d942">lastFrameTime</a> = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">   66</a></span>    uint <a class="code hl_variable" href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">currentFrameTime</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">frameTime</a>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        sceneManager.update();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        sceneManager.render();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        SDL_RenderPresent(renderer);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="namespacemain.html#a50ff163f062d2d699dba58bfd6e9e8dd">   70</a></span>    <span class="keywordflow">while</span> (running) </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">currentFrameTime</a> = SDL_GetTicks();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_variable" href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">frameTime</a> = <a class="code hl_variable" href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">currentFrameTime</a> - <a class="code hl_variable" href="namespacemain.html#a3fc63bc7d06dc72f3e1a37a8b359d942">lastFrameTime</a>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="namespacemain.html#a42997c7c54084815bfed352d8cee6c83">   75</a></span>    <a class="code hl_function" href="namespacemain.html#a42997c7c54084815bfed352d8cee6c83">SDL_DestroyRenderer</a>(renderer);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacemain.html#a541352f38c03843d2f9ac5435ea55f06">   76</a></span>    <a class="code hl_function" href="namespacemain.html#a541352f38c03843d2f9ac5435ea55f06">SDL_DestroyWindow</a>(window);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespacemain.html#a70e0a3b0ef3b9ef2a85b9dd174c43456">   77</a></span>    <a class="code hl_function" href="namespacemain.html#a70e0a3b0ef3b9ef2a85b9dd174c43456">TTF_Quit</a>(); </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="namespacemain.html#ac44f96c0e9c7629d7a332c370b13add6">   78</a></span>    <a class="code hl_function" href="namespacemain.html#ac44f96c0e9c7629d7a332c370b13add6">unloadSDLTTF</a>();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="namespacemain.html#a2bb998d5f690bfac6b292e8d52555699">   79</a></span>    <a class="code hl_function" href="namespacemain.html#a2bb998d5f690bfac6b292e8d52555699">SDL_Quit</a>();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">//handle events</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">while</span> (SDL_PollEvent(&amp;<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>) != 0) </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>.type == SDL_QUIT) </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <a class="code hl_variable" href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">running</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            } </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">else</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                sceneManager.handleEvent(<a class="code hl_variable" href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">event</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="comment">//update and render</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        sceneManager.update();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        sceneManager.render();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        SDL_RenderPresent(renderer);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">// Calculate delay to cap the frame rate</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">frameTime</a> &lt; <a class="code hl_variable" href="namespacemain.html#a0f4f6b088879a2f55d2b71b0fbcb465a">frameDelay</a>) </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            SDL_Delay(<a class="code hl_variable" href="namespacemain.html#a0f4f6b088879a2f55d2b71b0fbcb465a">frameDelay</a> - <a class="code hl_variable" href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">frameTime</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_variable" href="namespacemain.html#a3fc63bc7d06dc72f3e1a37a8b359d942">lastFrameTime</a> = <a class="code hl_variable" href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">currentFrameTime</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="namespacemain.html#a42997c7c54084815bfed352d8cee6c83">  103</a></span>    <a class="code hl_function" href="namespacemain.html#a42997c7c54084815bfed352d8cee6c83">SDL_DestroyRenderer</a>(renderer);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="namespacemain.html#a541352f38c03843d2f9ac5435ea55f06">  104</a></span>    <a class="code hl_function" href="namespacemain.html#a541352f38c03843d2f9ac5435ea55f06">SDL_DestroyWindow</a>(window);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="namespacemain.html#a70e0a3b0ef3b9ef2a85b9dd174c43456">  105</a></span>    <a class="code hl_function" href="namespacemain.html#a70e0a3b0ef3b9ef2a85b9dd174c43456">TTF_Quit</a>(); </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="namespacemain.html#ac44f96c0e9c7629d7a332c370b13add6">  106</a></span>    <a class="code hl_function" href="namespacemain.html#ac44f96c0e9c7629d7a332c370b13add6">unloadSDLTTF</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="namespacemain.html#a2bb998d5f690bfac6b292e8d52555699">  107</a></span>    <a class="code hl_function" href="namespacemain.html#a2bb998d5f690bfac6b292e8d52555699">SDL_Quit</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
 <div class="ttc" id="anamespacebindbc_1_1sdl_html"><div class="ttname"><a href="namespacebindbc_1_1sdl.html">sdl</a></div></div>
 <div class="ttc" id="anamespaceedit__scene_html"><div class="ttname"><a href="namespaceedit__scene.html">edit_scene</a></div><div class="ttdef"><b>Definition</b> <a href="edit__scene_8d_source.html#l00001">edit_scene.d:1</a></div></div>
 <div class="ttc" id="anamespacegame__over__scene_html"><div class="ttname"><a href="namespacegame__over__scene.html">game_over_scene</a></div><div class="ttdef"><b>Definition</b> <a href="game__over__scene_8d_source.html#l00001">game_over_scene.d:1</a></div></div>
@@ -181,18 +209,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacegame__won__scene_html"><div class="ttname"><a href="namespacegame__won__scene.html">game_won_scene</a></div><div class="ttdef"><b>Definition</b> <a href="game__won__scene_8d_source.html#l00001">game_won_scene.d:1</a></div></div>
 <div class="ttc" id="anamespacehome__scene_html"><div class="ttname"><a href="namespacehome__scene.html">home_scene</a></div><div class="ttdef"><b>Definition</b> <a href="home__scene_8d_source.html#l00001">home_scene.d:1</a></div></div>
 <div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="#l00002">main.d:2</a></div></div>
-<div class="ttc" id="anamespacemain_html_a07604716766a5d60f1b2008c42a0a2c5"><div class="ttname"><a href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">main::gameOverScene</a></div><div class="ttdeci">GameOverScene gameOverScene</div><div class="ttdef"><b>Definition</b> <a href="#l00051">main.d:51</a></div></div>
-<div class="ttc" id="anamespacemain_html_a20e6ddfd4bf90b1d06bedab62e674af2"><div class="ttname"><a href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">main::gameScene</a></div><div class="ttdeci">GameScene gameScene</div><div class="ttdef"><b>Definition</b> <a href="#l00048">main.d:48</a></div></div>
+<div class="ttc" id="anamespacemain_html_a07604716766a5d60f1b2008c42a0a2c5"><div class="ttname"><a href="namespacemain.html#a07604716766a5d60f1b2008c42a0a2c5">main::gameOverScene</a></div><div class="ttdeci">GameOverScene gameOverScene</div><div class="ttdef"><b>Definition</b> <a href="#l00053">main.d:53</a></div></div>
+<div class="ttc" id="anamespacemain_html_a0f4f6b088879a2f55d2b71b0fbcb465a"><div class="ttname"><a href="namespacemain.html#a0f4f6b088879a2f55d2b71b0fbcb465a">main::frameDelay</a></div><div class="ttdeci">int frameDelay</div><div class="ttdef"><b>Definition</b> <a href="#l00064">main.d:64</a></div></div>
+<div class="ttc" id="anamespacemain_html_a20e6ddfd4bf90b1d06bedab62e674af2"><div class="ttname"><a href="namespacemain.html#a20e6ddfd4bf90b1d06bedab62e674af2">main::gameScene</a></div><div class="ttdeci">GameScene gameScene</div><div class="ttdef"><b>Definition</b> <a href="#l00050">main.d:50</a></div></div>
 <div class="ttc" id="anamespacemain_html_a2bb998d5f690bfac6b292e8d52555699"><div class="ttname"><a href="namespacemain.html#a2bb998d5f690bfac6b292e8d52555699">main::SDL_Quit</a></div><div class="ttdeci">SDL_Quit()</div></div>
+<div class="ttc" id="anamespacemain_html_a3fc63bc7d06dc72f3e1a37a8b359d942"><div class="ttname"><a href="namespacemain.html#a3fc63bc7d06dc72f3e1a37a8b359d942">main::lastFrameTime</a></div><div class="ttdeci">uint lastFrameTime</div><div class="ttdef"><b>Definition</b> <a href="#l00065">main.d:65</a></div></div>
 <div class="ttc" id="anamespacemain_html_a42997c7c54084815bfed352d8cee6c83"><div class="ttname"><a href="namespacemain.html#a42997c7c54084815bfed352d8cee6c83">main::SDL_DestroyRenderer</a></div><div class="ttdeci">SDL_DestroyRenderer(renderer)</div></div>
 <div class="ttc" id="anamespacemain_html_a541352f38c03843d2f9ac5435ea55f06"><div class="ttname"><a href="namespacemain.html#a541352f38c03843d2f9ac5435ea55f06">main::SDL_DestroyWindow</a></div><div class="ttdeci">SDL_DestroyWindow(window)</div></div>
-<div class="ttc" id="anamespacemain_html_a5ff2972f739aee6a21b3e7cad7813087"><div class="ttname"><a href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">main::running</a></div><div class="ttdeci">bool running</div><div class="ttdef"><b>Definition</b> <a href="#l00058">main.d:58</a></div></div>
-<div class="ttc" id="anamespacemain_html_a66881e50694596e23a92f6a369a6baa9"><div class="ttname"><a href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">main::uploadScene</a></div><div class="ttdeci">UploadScene uploadScene</div><div class="ttdef"><b>Definition</b> <a href="#l00045">main.d:45</a></div></div>
+<div class="ttc" id="anamespacemain_html_a5ff2972f739aee6a21b3e7cad7813087"><div class="ttname"><a href="namespacemain.html#a5ff2972f739aee6a21b3e7cad7813087">main::running</a></div><div class="ttdeci">bool running</div><div class="ttdef"><b>Definition</b> <a href="#l00060">main.d:60</a></div></div>
+<div class="ttc" id="anamespacemain_html_a66881e50694596e23a92f6a369a6baa9"><div class="ttname"><a href="namespacemain.html#a66881e50694596e23a92f6a369a6baa9">main::uploadScene</a></div><div class="ttdeci">UploadScene uploadScene</div><div class="ttdef"><b>Definition</b> <a href="#l00047">main.d:47</a></div></div>
 <div class="ttc" id="anamespacemain_html_a70e0a3b0ef3b9ef2a85b9dd174c43456"><div class="ttname"><a href="namespacemain.html#a70e0a3b0ef3b9ef2a85b9dd174c43456">main::TTF_Quit</a></div><div class="ttdeci">TTF_Quit()</div></div>
-<div class="ttc" id="anamespacemain_html_a9ec8246b4abfe59fdb16eb30d9c2e153"><div class="ttname"><a href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">main::event</a></div><div class="ttdeci">SDL_Event event</div><div class="ttdef"><b>Definition</b> <a href="#l00057">main.d:57</a></div></div>
-<div class="ttc" id="anamespacemain_html_aa6d0dceb1b92e89da2c8f75f70a1d4a5"><div class="ttname"><a href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">main::gameWonScene</a></div><div class="ttdeci">GameWonScene gameWonScene</div><div class="ttdef"><b>Definition</b> <a href="#l00054">main.d:54</a></div></div>
+<div class="ttc" id="anamespacemain_html_a8b8d3e25f63c07af4731ad3d8e7138eb"><div class="ttname"><a href="namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb">main::currentFrameTime</a></div><div class="ttdeci">uint currentFrameTime</div><div class="ttdef"><b>Definition</b> <a href="#l00066">main.d:66</a></div></div>
+<div class="ttc" id="anamespacemain_html_a919f310212dc1f94d91f8dfccfd9e261"><div class="ttname"><a href="namespacemain.html#a919f310212dc1f94d91f8dfccfd9e261">main::frameTime</a></div><div class="ttdeci">int frameTime</div><div class="ttdef"><b>Definition</b> <a href="#l00067">main.d:67</a></div></div>
+<div class="ttc" id="anamespacemain_html_a9ec8246b4abfe59fdb16eb30d9c2e153"><div class="ttname"><a href="namespacemain.html#a9ec8246b4abfe59fdb16eb30d9c2e153">main::event</a></div><div class="ttdeci">SDL_Event event</div><div class="ttdef"><b>Definition</b> <a href="#l00059">main.d:59</a></div></div>
+<div class="ttc" id="anamespacemain_html_aa6d0dceb1b92e89da2c8f75f70a1d4a5"><div class="ttname"><a href="namespacemain.html#aa6d0dceb1b92e89da2c8f75f70a1d4a5">main::gameWonScene</a></div><div class="ttdeci">GameWonScene gameWonScene</div><div class="ttdef"><b>Definition</b> <a href="#l00056">main.d:56</a></div></div>
+<div class="ttc" id="anamespacemain_html_aa91f4d7db95935b071c29486230367b7"><div class="ttname"><a href="namespacemain.html#aa91f4d7db95935b071c29486230367b7">main::targetFPS</a></div><div class="ttdeci">int targetFPS</div><div class="ttdef"><b>Definition</b> <a href="#l00063">main.d:63</a></div></div>
 <div class="ttc" id="anamespacemain_html_ac44f96c0e9c7629d7a332c370b13add6"><div class="ttname"><a href="namespacemain.html#ac44f96c0e9c7629d7a332c370b13add6">main::unloadSDLTTF</a></div><div class="ttdeci">unloadSDLTTF()</div></div>
-<div class="ttc" id="anamespacemain_html_af572ff24dec787a4acf78b24c69f28e2"><div class="ttname"><a href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">main::editScene</a></div><div class="ttdeci">EditScene editScene</div><div class="ttdef"><b>Definition</b> <a href="#l00042">main.d:42</a></div></div>
+<div class="ttc" id="anamespacemain_html_af572ff24dec787a4acf78b24c69f28e2"><div class="ttname"><a href="namespacemain.html#af572ff24dec787a4acf78b24c69f28e2">main::editScene</a></div><div class="ttdeci">EditScene editScene</div><div class="ttdef"><b>Definition</b> <a href="#l00044">main.d:44</a></div></div>
 <div class="ttc" id="anamespacescene__manager_html"><div class="ttname"><a href="namespacescene__manager.html">scene_manager</a></div><div class="ttdef"><b>Definition</b> <a href="scene__manager_8d_source.html#l00002">scene_manager.d:2</a></div></div>
 <div class="ttc" id="anamespacesdl__abstraction_html"><div class="ttname"><a href="namespacesdl__abstraction.html">sdl_abstraction</a></div><div class="ttdef"><b>Definition</b> <a href="sdl__abstraction_8d_source.html#l00002">sdl_abstraction.d:2</a></div></div>
 <div class="ttc" id="anamespacestd_1_1stdio_html"><div class="ttname"><a href="namespacestd_1_1stdio.html">stdio</a></div></div>

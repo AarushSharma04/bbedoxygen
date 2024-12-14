@@ -6,5 +6,6 @@ var searchData=
   ['clear_5fbutton_3',['clear_button',['../classbrick__editor_1_1_brick_editor.html#ae5caada8692c331266111cdff85c275a',1,'brick_editor::BrickEditor']]],
   ['color_4',['color',['../classbricks_1_1_brick.html#a59d47a849883450718c422bb77690d87',1,'bricks::Brick']]],
   ['color_5fmapping_5',['color_mapping',['../classbrick__editor_1_1_brick_editor.html#ad116c3c7bf5798f9c1b1505bd9a065f8',1,'brick_editor::BrickEditor']]],
-  ['currentscene_6',['currentScene',['../classscene__manager_1_1_scene_manager.html#a28e46a9d73d63a9851be50f554715483',1,'scene_manager::SceneManager']]]
+  ['currentframetime_6',['currentFrameTime',['../namespacemain.html#a8b8d3e25f63c07af4731ad3d8e7138eb',1,'main']]],
+  ['currentscene_7',['currentScene',['../classscene__manager_1_1_scene_manager.html#a28e46a9d73d63a9851be50f554715483',1,'scene_manager::SceneManager']]]
 ];

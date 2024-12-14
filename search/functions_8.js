@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizevelocity_0',['normalizeVelocity',['../namespaceball.html#a48fa6c2d7c2222f107187e3b9a1dcd73',1,'ball']]]
+  ['normalizevelocity_0',['normalizeVelocity',['../classball_1_1_ball.html#a7db6fdbd5c9e320743e4dcdd2c26f224',1,'ball::Ball']]]
 ];

@@ -27,7 +27,7 @@
   <td id="projectalign">
    <div id="projectname">Brick Breaker
    </div>
-   <div id="projectbrief">Brick Breaker inspired game,  customizable levels</div>
+   <div id="projectbrief">Brick Breaker  game,  customizable levels</div>
   </td>
  </tr>
  </tbody>
@@ -135,6 +135,16 @@ Variables</h2></td></tr>
 <tr class="separator:a9ec8246b4abfe59fdb16eb30d9c2e153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ff2972f739aee6a21b3e7cad7813087" id="r_a5ff2972f739aee6a21b3e7cad7813087"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff2972f739aee6a21b3e7cad7813087">running</a> = true</td></tr>
 <tr class="separator:a5ff2972f739aee6a21b3e7cad7813087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91f4d7db95935b071c29486230367b7" id="r_aa91f4d7db95935b071c29486230367b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa91f4d7db95935b071c29486230367b7">targetFPS</a> = 60</td></tr>
+<tr class="separator:aa91f4d7db95935b071c29486230367b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4f6b088879a2f55d2b71b0fbcb465a" id="r_a0f4f6b088879a2f55d2b71b0fbcb465a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f4f6b088879a2f55d2b71b0fbcb465a">frameDelay</a> = 1000 / <a class="el" href="#aa91f4d7db95935b071c29486230367b7">targetFPS</a></td></tr>
+<tr class="separator:a0f4f6b088879a2f55d2b71b0fbcb465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc63bc7d06dc72f3e1a37a8b359d942" id="r_a3fc63bc7d06dc72f3e1a37a8b359d942"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fc63bc7d06dc72f3e1a37a8b359d942">lastFrameTime</a> = 0</td></tr>
+<tr class="separator:a3fc63bc7d06dc72f3e1a37a8b359d942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8d3e25f63c07af4731ad3d8e7138eb" id="r_a8b8d3e25f63c07af4731ad3d8e7138eb"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b8d3e25f63c07af4731ad3d8e7138eb">currentFrameTime</a></td></tr>
+<tr class="separator:a8b8d3e25f63c07af4731ad3d8e7138eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919f310212dc1f94d91f8dfccfd9e261" id="r_a919f310212dc1f94d91f8dfccfd9e261"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a919f310212dc1f94d91f8dfccfd9e261">frameTime</a></td></tr>
+<tr class="separator:a919f310212dc1f94d91f8dfccfd9e261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="adb7795a5dc442505328b15442f204a91" name="adb7795a5dc442505328b15442f204a91"></a>
@@ -359,11 +369,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00060">60</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00070">70</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a8b8d3e25f63c07af4731ad3d8e7138eb" name="a8b8d3e25f63c07af4731ad3d8e7138eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8d3e25f63c07af4731ad3d8e7138eb">&#9670;&#160;</a></span>currentFrameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint main::currentFrameTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00066">66</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+
+</div>
+</div>
 <a id="af572ff24dec787a4acf78b24c69f28e2" name="af572ff24dec787a4acf78b24c69f28e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af572ff24dec787a4acf78b24c69f28e2">&#9670;&#160;</a></span>editScene</h2>
 
@@ -376,7 +402,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00042">42</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00044">44</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -392,7 +418,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00057">57</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00059">59</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+
+</div>
+</div>
+<a id="a0f4f6b088879a2f55d2b71b0fbcb465a" name="a0f4f6b088879a2f55d2b71b0fbcb465a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4f6b088879a2f55d2b71b0fbcb465a">&#9670;&#160;</a></span>frameDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main::frameDelay = 1000 / <a class="el" href="#aa91f4d7db95935b071c29486230367b7">targetFPS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00064">64</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+
+</div>
+</div>
+<a id="a919f310212dc1f94d91f8dfccfd9e261" name="a919f310212dc1f94d91f8dfccfd9e261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919f310212dc1f94d91f8dfccfd9e261">&#9670;&#160;</a></span>frameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main::frameTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00067">67</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -408,7 +466,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00051">51</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00053">53</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -424,7 +482,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00048">48</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00050">50</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -440,7 +498,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00054">54</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00056">56</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+
+</div>
+</div>
+<a id="a3fc63bc7d06dc72f3e1a37a8b359d942" name="a3fc63bc7d06dc72f3e1a37a8b359d942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc63bc7d06dc72f3e1a37a8b359d942">&#9670;&#160;</a></span>lastFrameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint main::lastFrameTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00065">65</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -456,7 +530,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00058">58</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00060">60</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+
+</div>
+</div>
+<a id="aa91f4d7db95935b071c29486230367b7" name="aa91f4d7db95935b071c29486230367b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91f4d7db95935b071c29486230367b7">&#9670;&#160;</a></span>targetFPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main::targetFPS = 60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00063">63</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
@@ -472,7 +562,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00045">45</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8d_source.html#l00047">47</a> of file <a class="el" href="main_8d_source.html">main.d</a>.</p>
 
 </div>
 </div>
